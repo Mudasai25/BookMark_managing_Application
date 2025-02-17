@@ -1,3 +1,106 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bookmark-manager {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 30px;
+  border: 2px solid #ff007f;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  background-color: #1a1a1a;
+  color: #fff;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.5);
+  }
+  100% {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 50px rgba(0, 255, 255, 0.7);
+  }
+}
+
+input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border: 2px solid #ff007f;
+  border-radius: 10px;
+  background-color: #222;
+  color: #fff;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+  border-color: #00ffcc;
+  background-color: #333;
+  outline: none;
+  transform: scale(1.05);
+}
+
+button {
+  background-color: #ff007f;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  box-shadow: 0px 0px 15px rgba(255, 0, 127, 0.5);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #ff80c0;
+  transform: scale(1.1);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  background: #1a1a1a;
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(45deg, #ff007f, #ff80c0);
+  margin: 5px 0;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+li:hover {
+  background: linear-gradient(45deg, #ff80c0, #ff007f);
+  transform: scale(1.03);
+  box-shadow: 0px 0px 20px rgba(255, 0, 127, 0.8);
+}
+
+li .remove-btn {
+  background-color: #ff0000;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+li .remove-btn:hover {
+  background-color: #ff6666;
+}
